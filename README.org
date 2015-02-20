@@ -1,0 +1,23 @@
+#+TITLE: Report on the Workshop on the Intermediate Neutrino Program
+
+* To build:
+
+#+BEGIN_EXAMPLE
+  $ pdflatex WINP
+  $ bibtex WINP
+  $ pdflatex WINP
+  $ pdflatex WINP
+#+END_EXAMPLE
+
+The author list is generated from a spread sheet of registrants:
+
+#+BEGIN_EXAMPLE
+  $ python scripts/authorgen.py other/reginfo.xlsx > authors.tex 
+#+END_EXAMPLE
+
+You may need a few extra LaTeX packages.  On Debian/Ubuntu these are provided by:
+
+#+BEGIN_EXAMPLE
+  $ sudo apt-get install texlive-publishers texlive-latex-extra texlive-fonts-recommended
+#+END_EXAMPLE
+
