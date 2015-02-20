@@ -1,15 +1,20 @@
 #+TITLE: Report on the Workshop on the Intermediate Neutrino Program
 
-* To build:
+* Getting started
 
 #+BEGIN_EXAMPLE
+  $ git clone https://github.com/IntNeuPro/winp-report.git
+  $ cd winp-report/
+
   $ pdflatex WINP
   $ bibtex WINP
   $ pdflatex WINP
   $ pdflatex WINP
+
+  $ evince WINP.pdf
 #+END_EXAMPLE
 
-The author list is generated from a spread sheet of registrants:
+Note: do *not* edit =author.tex=.  It is generated from a spread sheet of registrants:
 
 #+BEGIN_EXAMPLE
   $ python scripts/authorgen.py other/reginfo.xlsx > authors.tex 
@@ -20,4 +25,11 @@ You may need a few extra LaTeX packages.  On Debian/Ubuntu these are provided by
 #+BEGIN_EXAMPLE
   $ sudo apt-get install texlive-publishers texlive-latex-extra texlive-fonts-recommended
 #+END_EXAMPLE
+
+* Contributing
+
+To push commits contact [[https://github.com/brettviren][Brett]] for access.  Tell him the name of this
+repository ("winp-report") and what your GitHub account name is.
+
+For human-oriented version control, contact Jon Link.
 
