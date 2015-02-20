@@ -1,0 +1,108 @@
+\documentclass[twoside,letterpaper,titlepage,nofootinbib,prd,12pt,superscriptaddress,floatfix]{revtex4-1}
+
+\usepackage[english]{babel}
+\usepackage{color}
+\usepackage{multirow}
+\usepackage{subfigure}
+\usepackage{graphicx}
+\usepackage{epsfig}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{wasysym}
+\usepackage{slashed}
+\usepackage{bbm}
+\usepackage{ctable,longtable}
+\usepackage{cancel}
+%\usepackage{draftwatermark}
+\usepackage{txfonts}
+
+%\SetWatermarkScale{1}
+%\singlespacing
+
+\input WINP_def.tex
+
+% Temporary definition files:
+
+\input 00_Introduction/def_temp.tex
+\input 01_Sterile/def_temp.tex
+\input 02_3NuMixing/def_temp.tex
+\input 03_Interactions/def_temp.tex
+\input 04_Properties/def_temp.tex
+\input 05_Astrophysical/def_temp.tex
+\input 06_AcceleratorSB/def_temp.tex
+\input 07_Reactor/def_temp.tex
+\input 08_SourceCyclotronDAR/def_temp.tex
+\input 09_RandD/def_temp.tex
+\input 10_Theory/def_temp.tex
+
+\begin{document}
+%..  General settings:
+%\setcounter{secnumdepth}{5}
+%\setcounter{tocdepth}{0}
+\selectlanguage{english}
+\makeatletter
+
+\pagestyle{empty}
+\thispagestyle{empty}
+\title{The Intermediate Neutrino Program}
+\date{\today}
+%========  Title page
+%\input 00a-Title-page/00a-Title-page
+%\cleardoublepage
+%========  Author list:
+\clearpage
+\input{./authors.tex}
+\maketitle
+
+\clearpage
+%========  Start of main text:
+
+\parindent 10pt
+\pagenumbering{roman}                   
+\setcounter{page}{1}
+\thispagestyle{plain}
+\pagestyle{plain}
+%\input 00c-Foreword/00c-Foreword
+%\cleardoublepage
+%..  Table of contents:
+\tableofcontents
+\clearpage
+
+%\cleardoublepage
+\pagenumbering{arabic}                   
+\setcounter{page}{1}
+
+%..  Introduction:
+\input 00_Introduction/Introduction.tex
+\newpage
+\input 01_Sterile/Sterile.tex
+\newpage
+\input 02_3NuMixing/3NuMixing.tex
+\newpage
+\input 03_Interactions/Interactions.tex
+\newpage
+\input 04_Properties/Properties.tex
+\newpage
+\input 05_Astrophysical/Astrophysical.tex
+\newpage
+\input 06_AcceleratorSB/AcceleratorSB.tex
+\newpage
+\input 07_Reactor/Reactor.tex
+\newpage
+\input 08_SourceCyclotronDAR/SourceCyclotronDAR.tex
+\newpage
+\input 09_RandD/RandD.tex
+\newpage
+\input 10_Theory/Theory.tex
+
+%--------  Acknowledgements:
+%\section*{Acknowledgements}
+
+%
+%..  References:
+\bibliographystyle{apsrev4-1}
+\bibliography{WINP}
+%
+%========  That's it.
+\end{document}

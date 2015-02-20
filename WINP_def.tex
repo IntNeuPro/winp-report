@@ -1,0 +1,574 @@
+%------------------------------------------------------------------------------
+% New command definitions, constants, etc. for the Sterile Neutrino 
+%                               White Paper
+% ===========================================================================
+%
+%  History:
+%    PH: 10Oct24: First version
+%------------------------------------------------------------------------------
+%	Some special symbols etc.:
+%       --------------------------
+%       -> small numbers
+%------------------------------------------------------------------------------
+\def\zero{{\scriptscriptstyle 0}}
+\def\sone{{\scriptscriptstyle 1}}
+\def\stwo{{\scriptscriptstyle 2}}
+\def\sthr{{\scriptscriptstyle 3}}
+\def\sfou{{\scriptscriptstyle 4}}
+\def\sfiv{{\scriptscriptstyle 5}}
+\def\sfiv{{\scriptscriptstyle 5}}
+\def\ssix{{\scriptscriptstyle 6}}
+\def\ssev{{\scriptscriptstyle 7}}
+\def\seig{{\scriptscriptstyle 8}}
+\def\snin{{\scriptscriptstyle 9}}
+\def\sten{{\scriptscriptstyle 10}}
+\def\half{{\scriptscriptstyle 1/2}}
+%------------------------------------------------------------------------------
+%       -> eV and multiples
+%------------------------------------------------------------------------------
+\def\Ev{\ensuremath{\text{e}\text{V\/}}}
+\def\eV{\ensuremath{\text{e}\text{V\/}}}
+\def\Kev{\ensuremath{\text{ke}\text{V\/}}}
+\def\Mev{\ensuremath{\text{Me}\text{V\/}}}
+\def\Gev{\ensuremath{\text{Ge}\text{V\/}}}
+\def\GeV{\ensuremath{\text{Ge}\text{V\/}}}
+\def\Gevc{\ensuremath{\text{Ge}\text{V\/}/c}}
+\def\Gevcs{\ensuremath{\text{Ge}\text{V\/}/c^2}}
+\def\Tev{\ensuremath{\text{Te}\text{V\/}}}
+\def\ev{\ensuremath{\,\text{e}\text{V\/}}}
+\def\kev{\ensuremath{\,\text{ke}\text{V\/}}}
+\def\mev{\ensuremath{\,\text{Me}\text{V\/}}}
+\def\gev{\ensuremath{\,\text{Ge}\text{V\/}}}
+\def\gevc{\ensuremath{\,\text{Ge}\text{V\/}/c}}
+\def\gevcs{\ensuremath{\,\text{Ge}\text{V\/}/c^2}}
+\def\tev{\ensuremath{\,\text{Te}\text{V\/}}}
+%------------------------------------------------------------------------------
+%       -> various other units (for math mode only)
+%------------------------------------------------------------------------------
+\def\pb{\,\text{pb}}
+\def\fb{\,\text{fb}}
+\def\pbi{\,\text{pb}^{-1}}
+\def\m{\,\text{m}}
+\def\cm{\,\text{cm}}
+\def\mm{\,\text{mm}}
+\def\km{\,\text{km}}
+\def\mum{\,\mu\text{m}}
+\def\mA{\,\text{mA}}
+\def\Hz{\,\text{Hz}}
+\def\kHz{\,\text{kHz}}
+\def\MHz{\,\text{MHz}}
+\def\ppm{\,\text{ppm}}
+\def\scnd{\,\text{s}}
+\def\musec{\,\mu\text{s}}
+\def\ns{\,\text{ns}}
+\def\rad{\,\text{rad}}
+\def\mrad{\,\text{mrad}}
+\def\murad{\,\mu\text{rad}}
+%------------------------------------------------------------------------------
+%       -> commonly used symbols
+%------------------------------------------------------------------------------
+\def\BR{{\rm BR}}
+\def\CC{{\scriptscriptstyle{\rm CC}}}
+\def\CI{{\scriptscriptstyle{\rm CI}}}
+\def\DA{{\scriptscriptstyle{\rm DA}}}
+\def\DO{{D{\O}}\xspace}
+\def\DCA{{\rm DCA}}
+\def\F{{\cal F}}
+\def\GRV{{\scriptscriptstyle{\rm GRV}}}
+\def\IC{{\scriptscriptstyle{\rm IC}}}
+\def\ISR{{\scriptscriptstyle{\rm ISR}}}
+\def\IP{{\rm I$@,$P}}
+\def\JB{{\scriptscriptstyle{\rm JB}}}
+\def\L{{\scriptscriptstyle{\rm L}}}
+\def\LL{{\scriptscriptstyle{\rm LL}}}
+\def\LQbar{\overline{\rm LQ}}
+\def\LQsub{{\scriptscriptstyle{\rm LQ}}}
+\def\LQ{{\rm LQ}}
+\def\LR{{\scriptscriptstyle{\rm LR}}}
+\def\Ldes{{\cal L}_{\rm des}}
+\def\Lumi{{\cal L}}
+\def\MC{{\scriptscriptstyle{\rm MC}}}
+\def\MSbar{\hbox{$\overline{\rm MS}$}}
+\def\NC{{\scriptscriptstyle{\rm NC}}}
+\def\NS{{\scriptscriptstyle{\rm NS}}}
+\def\Prob{{\cal P}}
+\def\QPM{{\scriptscriptstyle{\rm QPM}}}
+\def\RL{{\scriptscriptstyle{\rm RL}}}
+\def\RPv{{{\not R}_P}}
+\def\RR{{\scriptscriptstyle{\rm RR}}}
+\def\R{{\scriptscriptstyle{\rm R}}}
+\def\SM{{\scriptscriptstyle{\rm SM}}}
+\def\SU2U1{{\rm SU}(2)\times{\rm U}(1)}
+\def\Ssup{{\scriptscriptstyle{\rm S}}}
+\def\XXX{\hbox{\bf ??}}
+\def\alsmu#1{{\alpha_s(\mu_{#1}^2)}}
+\def\alsmz{{\alpha_s(M_Z^2)}}
+\def\alsqs{{\alpha_s(Q^2)}}
+\def\als{{\alpha_s}}
+\def\ctwb{\cos\theta_{\scriptscriptstyle W}}
+\def\ctws{\cos^2\theta_{\scriptscriptstyle W}}
+\def\cut{{\rm cut}}
+\def\data{{\rm data}}
+\def\det{{\rm det}}
+\def\dof{{\rm dof}}
+\def\elm{{\rm elm}}
+\def\epslam{{\epsilon/\Lambda^2}}
+\def\exc{{\rm exc}}
+\def\exp{{\rm exp}}
+\def\gh{{\gamma_h}}
+\def\had{{\rm had}}
+\def\kg{{k_\gamma}}
+\def\lsq#1{{\lambda_{#1}}}
+\def\lsqp#1{{\lambda'_{#1}}}
+\def\lsqpp#1{{{\lambda''}_{#1}}}
+\def\max{{\rm max}}
+\def\meas{{\rm meas}}
+\def\min{{\rm min}}
+\def\obs{{\rm obs}}
+\def\ord#1{{\cal O}(#1)}
+\def\rnge{{\,\text{--}\,}}
+\def\sca{{\rm sca}}
+\def\sihat{{\hat\sigma}}
+\def\slim{{\rm lim}}
+\def\slimb{{\rm lim,B}}
+\def\slimr{{\rm lim,R}}
+\def\smin{{\rm min}}
+\def\smax{{\rm max}}
+\def\stwb{\sin\theta_{\scriptscriptstyle W}}
+\def\stwss{\sin^4\theta_{\scriptscriptstyle W}}
+\def\stws{\sin^2\theta_{\scriptscriptstyle W}}
+\def\sys{{\rm sys}}
+\def\ta{{\theta^\ast}}
+\def\tilR{\tilde R}
+\def\tilS{\tilde S}
+\def\tilU{\tilde U}
+\def\tilV{\tilde V}
+\def\tl{{\theta_\ell}}
+\def\tot{{\rm tot}}
+\def\true{{\rm true}}
+\def\tw{\theta_{\scriptscriptstyle W}}
+%------------------------------------------------------------------------------
+%       -> some math symbols (+,-,...) for usage as mathchar's
+%------------------------------------------------------------------------------
+\mathchardef\qsm=63
+\mathchardef\pls=43
+\mathchardef\mns=512
+\mathchardef\plm=518
+\mathchardef\eql=61
+\mathchardef\smallleft=300
+\mathchardef\smallright=301
+\mathchardef\perslsh=47
+\mathchardef\les=316
+\mathchardef\gre=318
+\mathchardef\leq=532
+\mathchardef\grq=533
+%------------------------------------------------------------------------------
+%       -> characters for typewriter font (used for http addresses)
+%------------------------------------------------------------------------------
+\chardef\usc=95
+\chardef\til=126
+%------------------------------------------------------------------------------
+%       -> shorthand for "integral limits below and above"
+%------------------------------------------------------------------------------
+\def\intl{\int\limits}
+%------------------------------------------------------------------------------
+%       -> footenote markers
+%------------------------------------------------------------------------------
+\def\fdag{$^{{\displaystyle\dagger})}$}
+\def\fddag{$^{{\displaystyle\ddagger})}$}
+\def\fstar{$^{{\displaystyle\star})}$}
+\def\faste{$^{{\displaystyle\ast})}$}
+%------------------------------------------------------------------------------
+%       -> d'Alembert operator
+%------------------------------------------------------------------------------
+\def\sqr#1#2#3{{\vcenter{\hrule height.#3ex\hbox{\vrule width.#2ex height#1ex
+    \kern#1ex\vrule width.#3ex}\hrule height.#2ex}}}
+\def\dalem{\mathchoice\sqr{1.6}{08}{24}\sqr{1.6}{08}{24}
+                      \sqr{1.4}{07}{21}\sqr{1.1}{06}{18}}
+%------------------------------------------------------------------------------
+%       -> rectangle with arrow ( '-> )
+%------------------------------------------------------------------------------
+\def\angleto{\vrule width.035em height2.1ex depth-.56ex\unskip\kern-.6ex\to}
+%------------------------------------------------------------------------------
+%       -> permille sign
+%------------------------------------------------------------------------------
+\def\perchc#1{{\raise.4ex\hbox{$\mkern4mu#1{\it\perslsh}_
+             {\mkern-5mu\scriptscriptstyle{{\rm o}\!{\rm o}}}^
+             {\mkern-12.8mu\scriptscriptstyle{\rm o}}$}}}
+\def\permil{{\mathchoice\perchc{\displaystyle}\perchc{\textstyle}
+             \perchc{\scriptstyle}\perchc{\scriptscriptstyle}}}
+%------------------------------------------------------------------------------
+%       -> wide bar and bar in parantheses as mathaccents, some applications
+%------------------------------------------------------------------------------
+\def\widebar#1{\mkern1.5mu\overline{\mkern-1.5mu#1\mkern-1.mu}\mkern1.mu}
+\catcode`\@=11 % @ signs are now treated as letters
+\def\parenbar{\mathpalette\p@renb@r}
+\def\p@renb@r#1#2{\vbox{%
+  \ifx#1\scriptscriptstyle \dimen@.7em\dimen@ii.2em\else
+  \ifx#1\scriptstyle \dimen@.8em\dimen@ii.25em\else
+  \dimen@1em\dimen@ii.4em\fi\fi \offinterlineskip
+  \ialign{\hfill##\hfill\cr
+    \vbox{\hrule width\dimen@ii}\cr
+    \noalign{\vskip-.3ex}%
+    \hbox to\dimen@{$\mathchar300\hfil\mathchar301$}\cr
+    \noalign{\vskip-.3ex}%
+    $#1#2$\cr}}}
+\catcode`\@=12 % @ signs are no longer letters
+\def\nuan{\ensuremath{\parenbar{\nu}}}
+\def\qqbar{\ensuremath{\parenbar{q}}}
+\def\pbar{\ensuremath{\widebar{p}}}
+\def\qbar{\ensuremath{\widebar{q}}}
+\def\dbar{\ensuremath{\widebar{d}}}
+\def\ubar{\ensuremath{\widebar{u}}}
+\def\sbar{\ensuremath{\widebar{s}}}
+\def\cbar{\ensuremath{\widebar{c}}}
+\def\bbar{\ensuremath{\widebar{b}}}
+\def\tbar{\ensuremath{\widebar{t}}}
+\def\nubar{\ensuremath{\widebar{\nu}}}
+\def\Dbar{\ensuremath{\widebar{D}}}
+\def\ebar{\ensuremath{\widebar{e}}}
+%------------------------------------------------------------------------------
+%	Some shorthands and utilities:
+%       ------------------------------
+%       -> vertical rule of width zero and variable height & depth
+%------------------------------------------------------------------------------
+\newbox\struttbox
+\setbox\struttbox=\hbox{\vrule height1.65ex depth.485ex width0pt}
+\def\strutt{\relax\ifmmode\copy\struttbox\else\unhcopy\struttbox\fi}
+\def\stru#1#2{\relax\ifmmode\hbox{\vrule height#1 depth#2 width0pt}
+\else\vrule height#1 depth#2 width0pt\fi}
+%------------------------------------------------------------------------------
+%       -> underline with resonable distance text - line
+%------------------------------------------------------------------------------
+\def\uline#1{$\underline{\hbox{#1\strutt}}$}
+%------------------------------------------------------------------------------
+%       -> roman numbers (uppercase and lowercase)
+%------------------------------------------------------------------------------
+\def\ronum#1{\uppercase\expandafter{\romannumeral#1}}
+\def\ronuml#1{\expandafter{\romannumeral#1}}
+%------------------------------------------------------------------------------
+%       -> vectors and matrices
+%------------------------------------------------------------------------------
+\def\vect#1{\begin{matrix}#1\end{matrix}}
+\def\pvect#1{\begin{pmatrix}#1\end{pmatrix}}
+\def\bvect#1{\begin{bmatrix}#1\end{bmatrix}}
+%------------------------------------------------------------------------------
+%       -> some alignment tools for tables
+%------------------------------------------------------------------------------
+\def\cA{{\phantom{0}}}
+\def\cB{{\phantom{00}}}
+\def\cC{{\phantom{000}}}
+\def\cD{{\phantom{0000}}}
+\def\cM{{\phantom{\mns}}}
+%------------------------------------------------------------------------------
+%       -> shorthand for protected citations in captions
+%------------------------------------------------------------------------------
+\def\pcite#1{\protect\cite{#1}}
+%------------------------------------------------------------------------------
+%       -> shorthands for equation, figure, table, section references
+%------------------------------------------------------------------------------
+%\def\eq#1{eq.~(\ref{eq-#1})}
+\def\eqsand#1#2{eqs.~(\ref{eq-#1}) and~(\ref{eq-#2})}
+\def\eqsto#1#2{eqs.~(\ref{eq-#1}-\ref{eq-#2})}
+\def\eqstwo#1#2{eqs.~(\ref{eq-#1},\ref{eq-#2})}
+\def\eqsthr#1#2#3{eqs.~(\ref{eq-#1},\ref{eq-#2},\ref{eq-#3})}
+\def\eqsfou#1#2#3#4{eqs.~(\ref{eq-#1},\ref{eq-#2},\ref{eq-#3},\ref{eq-#4})}
+\def\Eq#1{Equation~(\ref{eq-#1})}
+\def\Eqsto#1#2{Equations~(\ref{eq-#1}-\ref{eq-#2})}
+%\def\fig#1{Fig.~\ref{fig-#1}}
+\def\figs#1{Fig.~\ref{fig-#1}}
+\def\Fig#1{Figure~\ref{fig-#1}}
+\def\figand#1#2{Figs.~\ref{fig-#1} and~\ref{fig-#2}}
+\def\figand#1#2{Figs.~\ref{fig-#1} and~\ref{fig-#2}}
+\def\tab#1{Table~\ref{tab-#1}}
+\def\tabsand#1#2{Tables~\ref{tab-#1} and~\ref{tab-#2}}
+\def\Tab#1{Table~\ref{tab-#1}}
+\def\sec#1{Sect.~\ref{sec-#1}}
+\def\Sec#1{Section~\ref{sec-#1}}
+\def\secand#1#2{Sects.~\ref{sec-#1} and~\ref{sec-#2}}
+\def\secsto#1#2{Sects.\ref{sec-#1} to~\ref{sec-#2}}
+%------------------------------------------------------------------------------
+%	Local laguage changes
+%       ---------------------
+%------------------------------------------------------------------------------
+\def\german#1{\selectlanguage{german}#1\selectlanguage{english}}
+%------------------------------------------------------------------------------
+%	Redefine mathbf
+%       ---------------
+%------------------------------------------------------------------------------
+\DeclareMathAlphabet{\mathbf}{OT1}{cmr}{bx}{sl}
+\def\mb{\mathbf}
+%------------------------------------------------------------------------------
+%
+% New commands:
+%
+%------------------------------------------------------------------------------
+%
+\newcommand{\gevsq}     {\mbox{${\rm GeV}^2$}}
+\newcommand{\qsd}       {\mbox{${Q^2}$}}
+\newcommand{\PTM}       {P_{T\rm miss}}
+\newcommand{\x}         {\mbox{${\it x}$}}
+\newcommand{\y}         {\mbox{${\it y}$}}
+\newcommand{\ye}        {\mbox{${y_{e}}$}}
+\newcommand{\smallqsd}  {\mbox{${q^2}$}}
+\newcommand{\rambox}    {\mbox{$ \rightarrow $}}
+\newcommand{\ra}        {$\rightarrow$}
+\newcommand{\ygen}      {\mbox{${y_{gen}}$}}
+\newcommand{\yjb}       {\mbox{${y_{_{JB}}}$}}
+\newcommand{\yda}       {\mbox{${y_{_{DA}}}$}}
+\newcommand{\qda}       {\mbox{${Q^2_{_{DA}}}$}}
+\newcommand{\qjb}       {\mbox{${Q^2_{_{JB}}}$}}
+\newcommand{\ypt}       {\mbox{${y_{_{PT}}}$}}
+\newcommand{\qpt}       {\mbox{${Q^2_{_{PT}}}$}}
+\newcommand{\ypr}       {\mbox{${y_{(1)}}$}}
+\newcommand{\yprpr}     {\mbox{${y_{(2)}}$}}
+\newcommand{\ypps}      {\mbox{${y_{(2)}^2}$}}
+\newcommand{\gammah}    {\mbox{$\gamma_{_{H}}$}}
+\newcommand{\gammahc}   {\mbox{$\gamma_{_{PT}}$}}
+\newcommand{\gap}       {\hspace{0.5cm}}
+\newcommand{\gsim}      {\mbox{\raisebox{-0.4ex}{$\;\stackrel{>}{\scriptstyle \sim}\;$}}}
+\newcommand{\lsim}      {\mbox{\raisebox{-0.4ex}{$\;\stackrel{<}{\scriptstyle \sim}\;$}}}
+\renewcommand{\thefootnote}{\arabic{footnote}}
+%
+%----------------------------------------------------------------------------
+%
+% Constants etc.
+% ==============
+%
+%----------------------------------------------------------------------------
+% Define (e.g.) working value of theta_23?
+%
+%----------------------------------------------------------------------------
+%
+% Paper format
+% ============
+%
+%----------------------------------------------------------------------------
+%
+%------------------------------------------------------------------------------
+%	page layout
+%------------------------------------------------------------------------------
+\paperheight    29.7cm
+\paperwidth     21.0cm
+%------------------------------------------------------------------------------
+%	... horizontal spacings
+%------------------------------------------------------------------------------
+\textwidth      16.5cm
+\evensidemargin -0.3cm
+\oddsidemargin  -0.3cm
+%------------------------------------------------------------------------------
+%	... vertical spacings
+%------------------------------------------------------------------------------
+\textheight     675.pt % 650.pt
+%\topmargin      -1.5cm -- KL 18Apr06
+\footskip        1.0cm
+%------------------------------------------------------------------------------
+%	interline spacing, paragraph indention etc.
+%------------------------------------------------------------------------------
+\renewcommand{\baselinestretch}{1.0}
+%\renewcommand{\baselinestretch}{1.12}
+\renewcommand{\arraystretch}{1.1}
+\parindent       0.0pt
+\parskip         0.3cm plus0.05cm minus0.05cm
+\overfullrule    0.0pt
+%------------------------------------------------------------------------------
+%	item spacings
+%------------------------------------------------------------------------------
+%\itemsep    0.2ex plus 0.1ex minus 0.15ex
+%\topsep     0.2ex plus 0.1ex minus 0.15ex
+%\partopsep  1.2ex plus 0.6ex minus 0.6ex
+%\setlength\leftmargini   {1.6em}
+%\setlength\leftmarginii  {1.4em}
+%\setlength\leftmarginiii {1.2em}
+%\setlength\leftmarginiv  {1.0em}
+%------------------------------------------------------------------------------
+%	"tight item" environments
+%------------------------------------------------------------------------------
+\newenvironment{tightitemize}[2]
+ {\begin{list}{$\bullet$}%
+  {\setlength{\leftmargin}{\leftmargini}%
+   \setlength{\topsep}{#1}%
+   \setlength{\itemsep}{#2}%
+  }%
+ }%
+ {\end{list}}
+\newenvironment{tightsubitemize}[2]
+ {\begin{list}{$-$}%
+  {\setlength{\leftmargin}{\leftmargini}%
+   \setlength{\topsep}{#1}%
+   \setlength{\itemsep}{#2}%
+  }%
+ }%
+ {\end{list}}
+\newenvironment{tightssubitemize}[2]
+ {\begin{list}{$\to$}%
+  {\setlength{\leftmargin}{\leftmargini}%
+   \setlength{\topsep}{#1}%
+   \setlength{\itemsep}{#2}%
+  }%
+ }%
+ {\end{list}}
+%------------------------------------------------------------------------------
+%	float parameters
+%------------------------------------------------------------------------------
+\renewcommand{\topfraction}{1.}
+\renewcommand{\bottomfraction}{1.}
+\renewcommand{\textfraction}{0.01}
+\setlength{\floatsep}{6pt plus 3pt minus 3pt}
+\setlength{\textfloatsep}{12pt plus 8pt minus 4pt}
+%------------------------------------------------------------------------------
+%	adjust footnote design
+%------------------------------------------------------------------------------
+\catcode`\@=11 % @ signs are now treated as letters
+\newlength{\@fninsert}
+\setlength{\@fninsert}{0.6em}
+\newlength{\@fnwidth}
+\setlength{\@fnwidth}{\textwidth}
+\addtolength{\@fnwidth}{-\@fninsert}
+\addtolength{\@fnwidth}{-0.4em}
+\renewcommand{\@makefntext}[1]%
+  {\noindent\makebox[\@fninsert][r]{\@makefnmark}\hfil%
+  \parbox[t]{\@fnwidth}{#1}}
+\catcode`\@=12 % @ signs are no longer letters
+\addtolength{\skip\footins}{2.mm}
+%------------------------------------------------------------------------------
+%	equation numbers like (n.k): n=section, k=equation
+%------------------------------------------------------------------------------
+%\numberwithin{equation}{section}
+%\renewcommand{\theequation}{\arabic{section}.\arabic{equation}}
+%------------------------------------------------------------------------------
+%	set section numbering depth (5: allow for sections up to i.j.k.l.m.)
+%       and redefine section, subsection, subsubsection, paragraph 
+%       to yield a proper heading
+%       force four levels of headers in the table of contents
+%------------------------------------------------------------------------------
+\catcode`\@=11 % @ signs are now treated as letters
+\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{2}
+\renewcommand\section{\@startsection{section}{1}{\z@}%
+                                   {-3.5ex \@plus -1ex \@minus -.2ex}%
+                                   {2.3ex \@plus.2ex}%
+                                   {\normalfont\Large\bfseries}}
+\renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
+                                   {-3.25ex\@plus -1ex \@minus -.2ex}%
+                                   {1.5ex \@plus .2ex}%
+                                   {\normalfont\large\bfseries}}
+\renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
+                                   {-3.25ex\@plus -1ex \@minus -.2ex}%
+                                   {1.5ex \@plus .2ex}%
+                                   {\normalfont\normalsize\bfseries}}
+\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
+                                   {3.25ex \@plus1ex \@minus.2ex}%
+                                   {1.2ex \@plus .2ex}%
+                                   {\normalfont\normalsize\bfseries}}
+\catcode`\@=12 % @ signs are no longer letters
+%------------------------------------------------------------------------------
+%	separators for subsections and sections
+%------------------------------------------------------------------------------
+\def\sectionsep{\strut}
+\def\chaptersep{\vfill\eject}
+%------------------------------------------------------------------------------
+%	Add hyphenation options
+%------------------------------------------------------------------------------
+\hyphenation{par-ti-cu-lar} \hyphenation{ex-pe-ri-men-tal}
+\hyphenation{dif-fe-rent} \hyphenation{bet-we-en}
+\hyphenation{mo-du-lus}
+%
+%--------  End  --------  --------  --------  --------  --------  --------
+% Quantum mechanical notation
+\newcommand{\bra}[1]{\ensuremath{\langle #1 |}}   % Bra vector
+\newcommand{\ket}[1]{\ensuremath{| #1 \rangle}}   % Ket vector
+\newcommand{\amp}[3]{\ensuremath{\left\langle #1 \,\left|\, #2%
+                     \,\right|\, #3 \right\rangle}}  % QM amplitude
+\newcommand{\sprod}[2]{\ensuremath{\left\langle #1 |%
+                     #2 \right\rangle}}  % QM scalar product
+%\newcommand{\ev}[1]{\ensuremath{\left\langle #1 %
+%                     \right\rangle}} % Expectation value
+\newcommand{\ds}[1]{\ensuremath{\! \frac{d^3#1}{(2\pi)^3 %
+                     \sqrt{2 E_\vec{#1}}} \,}} % Spatial integral
+\newcommand{\dst}[1]{\ensuremath{\! %
+                     \frac{d^4#1}{(2\pi)^4} \,}} % Space-time integral
+\newcommand{\tr}{{\rm tr}} % Trace
+\newcommand{\sgn}{{\rm sgn}} % Trace
+
+% Miscellaneous commands
+\newcommand{\eps}{\varepsilon}
+
+
+\newcommand{\eVq}  {\text{eV}^2}
+\newcommand{\Dmq}  {\Delta m^2}
+
+%-- symbol shorthands and redefinitions -----------------------------
+
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+%\newcommand{\ra}{$\rightarrow$}
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\bea}{\begin{eqnarray}}
+\newcommand{\eea}{\end{eqnarray}}
+\newcommand{\nn}{\nonumber}
+\newcommand{\ldm}{\Delta m_{31}^2}
+\newcommand{\sdm}{\Delta m_{21}^2}
+\newcommand{\deltacp}{\delta_{\mathrm{CP}}}
+\newcommand{\stheta}{\sin^2 2 \theta_{13}}
+\newcommand{\deltacpt}{\delta_{\mathrm{CP}}^\mathrm{true}}
+\newcommand{\sthetat}{\sin^2 2 \theta_{13}^\mathrm{true}}
+
+\newcommand{\ie}{{\it i.e.}}
+\newcommand{\Ie}{{\it I.e.}}
+\newcommand{\eg}{{\it e.g.}}
+\newcommand{\Eg}{{\it E.g.}}
+\newcommand{\cf}{{\it cf.}}
+\newcommand{\Cf}{{\it Cf.}}
+\newcommand{\etc}{{\it etc.}}
+\newcommand{\eq}{Eq.}
+\newcommand{\eqs}{Eqs.}
+\newcommand{\Def}{Definition}
+\newcommand{\fig}{Fig.}
+%\newcommand{\Fig}{Fig.}
+%\newcommand{\figs}{Figs.}
+\newcommand{\Figs}{Figs.}
+\newcommand{\Ref}{Ref.}
+\newcommand{\Refs}{Refs.}
+%\newcommand{\Sec}{Sec.}
+\newcommand{\Secs}{Secs.}
+\newcommand{\App}{the Appendix}
+\newcommand{\Apps}{Appendices}
+%\newcommand{\Tab}{Table}
+\newcommand{\Tabs}{Tables}
+
+\newcommand{\eet}{\epsilon^m_{e\tau}}
+\newcommand{\emt}{\epsilon^m_{\mu\tau}}
+\newcommand{\ett}{\epsilon^m_{\tau\tau}}
+\newcommand{\eee}{\epsilon^m_{ee}}
+\newcommand{\eem}{\epsilon^m_{e\mu}}
+\newcommand{\emm}{\epsilon^m_{\mu\mu}}
+\newcommand{\eeta}{|\epsilon^m_{e\tau}|}
+\newcommand{\emta}{|\epsilon^m_{\mu\tau}|}
+\newcommand{\etta}{|\epsilon^m_{\tau\tau}|}
+\newcommand{\eeea}{|\epsilon^m_{ee}|}
+\newcommand{\eema}{|\epsilon^m_{e\mu}|}
+\newcommand{\emma}{|\epsilon^m_{\mu\mu}|}
+\newcommand{\eetp}{\phi^m_{e\tau}}
+\newcommand{\emtp}{\phi^m_{\mu\tau}}
+\newcommand{\eemp}{\phi^m_{e\mu}}
+
+\newcommand{\SuperK}{{\sc Super-Kamiokande}}
+\newcommand{\JHFSK}{{\sc T2K}}
+\newcommand{\NUMI }{{\sc NO$\nu$A}}
+\newcommand{\MINOS}{{\sc MINOS}}
+\newcommand{\ICARUS}{{\sc ICARUS}}
+\newcommand{\OPERA}{{\sc OPERA}}
+\newcommand{\CNGS}{{\sc CNGS}}
+\newcommand{\ReactorI}{{\sc Reactor-I}}
+\newcommand{\ReactorII}{{\sc Reactor-II}}
+\newcommand{\JHFHK}{{\sc T2HK}}
+\newcommand{\NuFactII}{{\sc NuFact-II}}
+
+\newcommand{\equ}[1]{\eq~(\ref{equ:#1})}
+\newcommand{\figu}[1]{\fig~\ref{fig:#1}}
+
+\newcommand{\as}[2]{\left( \begin{array}{c} #1 \\ #2 \end{array} \right)}
+
+\newcommand{\Slash}[1]{\ooalign{\hfil$ \diagup $\hfil\crcr$#1$}}
