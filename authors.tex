@@ -1,396 +1,564 @@
-\author{X.~Qian}
-\affiliation{Brookhaven National Laboratory}
-\author{B.~Yu}
-\affiliation{Brookhaven National Laboratory}
-\author{M.~Bishai}
-\affiliation{Brookhaven National Laboratory}
-\author{M.A.~Thomson}
-\affiliation{University of Cambridge}
-\author{D.E.~Jaffe}
-\affiliation{Brookhaven National Laboratory}
-\author{B.~Rybolt}
-\affiliation{University of Tennessee}
-\author{D.~Cowen}
-\affiliation{Penn State}
-\author{J.~Cao}
-\affiliation{Institute of High Energy Physics}
-\author{O.~Peres}
-\affiliation{UNICAMP}
-\author{J.I.~Collar}
-\affiliation{University of Chicago}
-\author{E.~Romero Romero}
-\affiliation{ORNL/UTK}
-\author{A.~Galindo-Uribarri}
-\affiliation{Oak Ridge National Laboratory}
-\author{R.~Hill}
-\affiliation{University of Chicago}
-\author{W.C.~Louis}
-\affiliation{Los Alamos National Laboratory}
-\author{J.G.~Morfin}
-\affiliation{Fermilab}
-\author{M.C.~Goodman}
-\affiliation{Argonne National Laboratory}
-\author{L.~Kaufman}
-\affiliation{Indiana University}
-\author{D.~Lissauer}
-\affiliation{Brookhaven National Laboratory}
-\author{J.G.~Learned}
-\affiliation{University of Hawaii}
-\author{S.~Kettell}
-\affiliation{Brookhaven National Laboratory}
-\author{L.~Littenberg}
-\affiliation{Brookhaven National Laboratory}
-\author{K.M.~Heeger}
-\affiliation{Yale University}
-\author{B.~Fleming}
-\affiliation{Yale University}
-\author{G.~Sullivan}
-\affiliation{University of Maryland}
-\author{J.M.~Link}
-\affiliation{Virginia Tech}
-\author{H.~Gordon}
-\affiliation{Brookhaven National Laboratory}
-\author{P.~Huber}
-\affiliation{Virgnia Tech}
-\author{R.~Svoboda}
-\affiliation{University of California-Davis}
-\author{E.~Worcester}
-\affiliation{Brookhaven National Laboratory}
-\author{G.~Karagiorgi}
-\affiliation{The Univ. of Manchester}
-\author{D.A.~Dwyer}
-\affiliation{Lawrence Berkeley National Laboratory}
-\author{T.J.~Langford}
-\affiliation{Yale University}
-\author{C.~White}
-\affiliation{Illinois Tech}
-\author{K.~Scholberg}
-\affiliation{Duke University}
-\author{Y.~Efremenko}
-\affiliation{University of Tennessee}
-\author{A.B.~Sousa}
-\affiliation{University of Cincinnati}
-\author{A.~Bernstein}
-\affiliation{Lawrence Livermore National Laboratory}
-\author{R.M.~Kriske}
-\affiliation{University of Minnesota}
-\author{G.~Mills}
-\affiliation{Los Alamos National Laboratory}
-\author{G.~Deichert}
-\affiliation{Oak Ridge National Laboratory}
-\author{W.~Kilgore}
-\affiliation{Department of Energy}
-\author{B.R.~White}
-\affiliation{Oak Ridge National Laboratory}
-\author{M.~Chen}
-\affiliation{University of California - Irvine}
-\author{J.B.~Strait}
-\affiliation{Fermilab}
-\author{L.~Camilleri}
-\affiliation{Columbia University}
-\author{W.~Weng}
-\affiliation{Brookhaven National Laboratory}
-\author{G.T.~Garvey}
-\affiliation{Los Alamos National Laboratory}
-\author{K.~Lau}
-\affiliation{University of Houston}
-\author{D.~Reyna}
-\affiliation{Sandia National Laboratories}
-\author{Z.~Djurcic}
-\affiliation{Argonne National Laboratory}
-\author{R.~Rameika}
-\affiliation{Fermilab}
-\author{N.~Bowden}
-\affiliation{Lawrence Livermore National Laboratory}
-\author{K.~Han}
-\affiliation{Yale University}
-\author{J.~Carlson}
-\affiliation{Los Alamos National Laboratory}
-\author{J.~Maricic}
-\affiliation{University of Hawaii}
-\author{P.~Mumm}
-\affiliation{National Institute of Standards and Technology}
-\author{M.~Yeh}
-\affiliation{Brookhaven National Laboratory}
-\author{R.~Rosero}
-\affiliation{Brookhaven National Laboratory}
-\author{R.~Tayloe}
-\affiliation{Indiana University}
-\author{R.J.~Wilson}
-\affiliation{Colorado State University}
-\author{M.~Shaevitz}
-\affiliation{Columbia University}
-\author{S.~Gautam}
-\affiliation{Tribhuvan University}
-\author{J.~Spitz}
-\affiliation{Massachusetts Institute of Technology}
-\author{J.~Joshi}
-\affiliation{Brookhaven National Laboratory}
-\author{I.~Mocioiu}
-\affiliation{Pennsylvania State University}
-\author{D.~Harris}
-\affiliation{Fermilab}
-\author{R.~Shrock}
-\affiliation{Stony Brook University}
-\author{J.~Stewart}
-\affiliation{Brookhaven National Laboratory}
-\author{D.M.~Markoff}
-\affiliation{North Carolina Central University}
-\author{P.~Rodrigues}
-\affiliation{University of Rochester}
-\author{M.P.~Green}
-\affiliation{Oak Ridge National Laboratory}
-\author{M.J.~Wilking}
-\affiliation{Stony Brook University}
-\author{M.~Sanchez}
-\affiliation{Iowa State University}
-\author{A.~Lankford}
-\affiliation{University of California, Irvine}
-\author{M.R.~Mooney}
-\affiliation{Brookhaven National Laboratory}
-\author{C.~Zhang}
-\affiliation{Brookhaven National Laboratory}
-\author{J.~Dolph}
-\affiliation{Brookhaven National Laboratory}
-\author{M.~Vagins}
-\affiliation{University of California, Irvine}
-\author{M.~Soderberg}
-\affiliation{Syracuse University}
-\author{P.~Paul}
-\affiliation{Stony Brook University}
-\author{H.~Ray}
-\affiliation{University of Florida}
-\author{T.~DeYoung}
-\affiliation{Michigan State University}
-\author{P.~Wilson}
-\affiliation{Fermilab}
-\author{M.J.~Dolinski}
-\affiliation{Drexel University}
-\author{E.~McCluskey}
-\affiliation{Fermilab}
-\author{D.~Norcini}
-\affiliation{Yale University}
-\author{A.~De Gouvea}
-\affiliation{Northwestern University}
-\author{A.~Ghassemi}
-\affiliation{Hamamatsu Photonics USA}
-\author{K.E.~Gilje}
-\affiliation{Illinois Institute of Technology}
-\author{S.~Hans}
-\affiliation{Brookhaven National Laboratory}
-\author{J.~Ashenfelter}
-\affiliation{Yale University}
-\author{S.~CHEN}
-\affiliation{Tsinghua University}
-\author{B.R.~Littlejohn}
-\affiliation{Fermilab}
-\author{R.~McKeown}
-\affiliation{Thomas Jefferson National Accelerator Facility}
-\author{M.~Nessi}
-\affiliation{CERN}
-\author{Y.~Hotta}
-\affiliation{Hamamatsu Photonics K.K.}
-\author{Y.~Yoshizawa}
-\affiliation{Hamamatsu Photonics}
-\author{E.I.~Rosenberg}
-\affiliation{Department of Energy}
-\author{G.~Crawford}
-\affiliation{DOE Office of Science}
-\author{K.~Babu}
-\affiliation{Oklahoma State University}
-\author{C.~Mauger}
-\affiliation{Los Alamos National Laboratory}
-\author{C.E.~Lane}
-\affiliation{Drexel University}
-\author{J.R.~Klein}
-\affiliation{University of Pennsylvania}
-\author{C.~Backhouse}
-\affiliation{California Institute of Technology}
-\author{A.M.~Szelc}
-\affiliation{Yale University}
-\author{J.M.~St. John}
-\affiliation{University of Cincinnati}
-\author{L.~Whitehead}
-\affiliation{University of Houston}
-\author{D.R.~Winn}
-\affiliation{Fairfield University}
-\author{B.~Monreal}
-\affiliation{University of California, Santa Barbara}
-\author{A.M.~Ankowski}
-\affiliation{Virginia Tech}
-\author{C.~Bryan}
-\affiliation{Oak Ridge National Laboratory}
-\author{E.D.~Church}
-\affiliation{FNAL/PNNL}
-\author{J.~Raaf}
-\affiliation{Fermilab}
-\author{M.~Heisel}
-\affiliation{Max-Planck-Institut fuer Kernphysik}
-\author{D.C.~Galehouse}
-\affiliation{University of Akron}
-\author{J.M.~Conrad}
-\affiliation{Massachusetts Institute of Technology}
-\author{D.~Winklehner}
-\affiliation{Massachusetts Institute of Technology}
-\author{M.~Toups}
-\affiliation{Massachusetts Institute of Technology}
-\author{R.E.~Carr}
-\affiliation{Columbia University}
-\author{P.S.~Barbeau}
-\affiliation{Duke University}
-\author{Z.W.~Yokley}
-\affiliation{Virginia Tech}
-\author{S.D.~Rountree}
-\affiliation{Virginia Tech}
-\author{Z.~Parsa}
-\affiliation{Brookhaven National Laboratory}
-\author{J.~Napolitano}
-\affiliation{Temple University}
-\author{W.J.~Marciano}
-\affiliation{Brookhaven National Laboratory}
-\author{R.L.~Cooper}
-\affiliation{Indiana university}
-\author{G.~Collin}
-\affiliation{Massachusetts Institute of Technology}
-\author{B.K.~Fujikawa}
-\affiliation{Lawrence Berkeley National Laboratory}
-\author{D.A.~Martinez Caicedo}
-\affiliation{Illinois Institute of Technology}
-\author{S.N.~Axani}
-\affiliation{Massachusetts Institute of Technology}
-\author{J.R.~Alonso}
-\affiliation{Massachusetts Institute of Technology}
-\author{H.R.~Band}
-\affiliation{Yale University}
-\author{D.~McKeen}
-\affiliation{University of Washington}
-\author{M.V.~Diwan}
-\affiliation{Brookhaven National Laboratory}
-\author{R.~Patterson}
-\affiliation{California Institute of Technology}
-\author{G.D.~Orebi Gann}
-\affiliation{Lawrence Berkeley National Laboratory}
-\author{B.J.~Kirby}
-\affiliation{Brookhaven National Laboratory}
-\author{J.~Nelson}
-\affiliation{William and Mary}
-\author{R.W.~Hackenburg}
-\affiliation{Brookhaven National Laboratory}
-\author{M.B.~SMy}
-\affiliation{University of California, Irvine}
-\author{L.L.~Everett}
-\affiliation{University of Wisconsin, Madison}
-\author{J.~Yoo}
-\affiliation{Fermilab}
-\author{M.~Betancourt}
-\affiliation{Fermilab}
-\author{M.~Locatelli}
-\affiliation{CAEN Technologies}
-\author{D.J.~Dean}
-\affiliation{Oak Ridge National Laboratory}
-\author{S.~Lockwitz}
-\affiliation{Fermilab}
-\author{K.~Mavrokoridis}
-\affiliation{University of Liverpool}
-\author{R.A.~Johnson}
-\affiliation{University of Cincinnati}
-\author{F.~Nova}
-\affiliation{University of Texas at Austin}
-\author{A.~Vacheret}
-\affiliation{University of Oxford}
-\author{D.R.~Nygren}
-\affiliation{University of Texas at Arlington}
-\author{F.~Descamps}
-\affiliation{Lawrence Berkeley National Laboratory}
-\author{B.~Kayser}
-\affiliation{Fermilab}
-\author{G.C.~Rich}
-\affiliation{Triangle Universities Nuclear Laboratory}
-\author{Y.G.~Kolomensky}
-\affiliation{University of California-Berkeley}
-\author{E.~Blucher}
-\affiliation{University of Chicago}
-\author{L.~Yang}
-\affiliation{University of Illinois at Urbana-Champaign}
-\author{M.~Lokajicek}
-\affiliation{Insitute of Physics of the Academy of Sciences of the Czech Republic}
-\author{B.~Donnelly}
-\affiliation{Massachusetts Institute of Technology}
-\author{O.~Palamara}
-\affiliation{Fermilab}
-\author{F.~Halzen}
-\affiliation{WIPAC / UW-Madison}
-\author{D.~Seckel}
-\affiliation{University of Delaware}
-\author{M.~Gonzalez-Garcia}
-\affiliation{Stony Brook University}
-\author{A.~Pocar}
-\affiliation{University of Massachusetts, Amherst}
-\author{A.~Chatterjee}
-\affiliation{University of Texas at Arlington}
-\author{E.~Figueroa-Feliciano}
-\affiliation{Massachusetts Institute of Technology}
-\author{H.~Davoudiasl}
-\affiliation{Brookhaven National Laboratory}
-\author{M.R.~Convery}
-\affiliation{SLAC National Accelerator Laboratory}
-\author{G.~Santucci}
-\affiliation{Stony Brook University}
-\author{D.~Schmitz}
-\affiliation{University of Chicago}
-\author{K.~Luk}
-\affiliation{University of California-Berkeley}
-\author{D.W.~Whittington}
-\affiliation{Indiana University}
-\author{S.~Dytman}
-\affiliation{University of Pittsburgh}
-\author{A.~Fava}
-\affiliation{Padova University and INFN}
-\author{A.~Bhatti}
-\affiliation{DOE Headquarters}
-\author{A.~Stone}
-\affiliation{Department of Energy}
-\author{R.G.~Van de Water}
-\affiliation{Los Alamos National Laboratory}
-\author{M.~Weber}
-\affiliation{Bern}
-\author{A.~Holin}
-\affiliation{University College London}
-\author{R.~Vogelaar}
-\affiliation{Virginia Tech}
-\author{M.~Chiu}
-\affiliation{Brookhaven National Laboratory}
-\author{A.~Hackenburg}
-\affiliation{Yale University}
-\author{J.~Yu}
-\affiliation{University of Texas at Arlington}
-\author{J.A.~Asaadi}
-\affiliation{Syracuse University}
-\author{A.~Sonzogni}
-\affiliation{Brookhaven National Laboratory}
+\footnotetext[1]{Convener}
+\footnotetext[2]{Organizer}
+\newcommand{\ArgonneNationalLaboratory}{Argonne National Laboratory}
+\affiliation{\ArgonneNationalLaboratory}
+\newcommand{\Bern}{Bern}
+\affiliation{\Bern}
+\newcommand{\BrookhavenNationalLaboratory}{Brookhaven National Laboratory}
+\affiliation{\BrookhavenNationalLaboratory}
+\newcommand{\CAENTechnologies}{CAEN Technologies}
+\affiliation{\CAENTechnologies}
+\newcommand{\CERN}{CERN}
+\affiliation{\CERN}
+\newcommand{\CaliforniaInstituteofTechnology}{California Institute of Technology}
+\affiliation{\CaliforniaInstituteofTechnology}
+\newcommand{\ColoradoStateUniversity}{Colorado State University}
+\affiliation{\ColoradoStateUniversity}
+\newcommand{\ColumbiaUniversity}{Columbia University}
+\affiliation{\ColumbiaUniversity}
+\newcommand{\DOEOfficeofScience}{DOE Office of Science}
+\affiliation{\DOEOfficeofScience}
+\newcommand{\DrexelUniversity}{Drexel University}
+\affiliation{\DrexelUniversity}
+\newcommand{\DukeUniversity}{Duke University}
+\affiliation{\DukeUniversity}
+\newcommand{\FNALPNNL}{FNAL/PNNL}
+\affiliation{\FNALPNNL}
+\newcommand{\FairfieldUniversity}{Fairfield University}
+\affiliation{\FairfieldUniversity}
+\newcommand{\Fermilab}{Fermilab}
+\affiliation{\Fermilab}
+\newcommand{\HamamatsuPhotonics}{Hamamatsu Photonics}
+\affiliation{\HamamatsuPhotonics}
+\newcommand{\HamamatsuPhotonicsKK}{Hamamatsu Photonics K.K.}
+\affiliation{\HamamatsuPhotonicsKK}
+\newcommand{\HamamatsuPhotonicsUSA}{Hamamatsu Photonics USA}
+\affiliation{\HamamatsuPhotonicsUSA}
+\newcommand{\IllinoisInstituteofTechnology}{Illinois Institute of Technology}
+\affiliation{\IllinoisInstituteofTechnology}
+\newcommand{\IndianaUniversity}{Indiana University}
+\affiliation{\IndianaUniversity}
+\newcommand{\Indianauniversity}{Indiana university}
+\affiliation{\Indianauniversity}
+\newcommand{\InsituteofPhysicsoftheAcademyofSciencesoftheCzechRepublic}{Insitute of Physics of the Academy of Sciences of the Czech Republic}
+\affiliation{\InsituteofPhysicsoftheAcademyofSciencesoftheCzechRepublic}
+\newcommand{\InstituteofHighEnergyPhysicsBeijing}{Institute of High Energy Physics, Beijing}
+\affiliation{\InstituteofHighEnergyPhysicsBeijing}
+\newcommand{\IowaStateUniversity}{Iowa State University}
+\affiliation{\IowaStateUniversity}
+\newcommand{\IstitutoNazionalediFisicaNucleareMilano}{Istituto Nazionale di Fisica Nucleare, Milano}
+\affiliation{\IstitutoNazionalediFisicaNucleareMilano}
+\newcommand{\LawrenceBerkeleyNationalLaboratory}{Lawrence Berkeley National Laboratory}
+\affiliation{\LawrenceBerkeleyNationalLaboratory}
+\newcommand{\LawrenceLivermoreNationalLaboratory}{Lawrence Livermore National Laboratory}
+\affiliation{\LawrenceLivermoreNationalLaboratory}
+\newcommand{\LosAlamosNationalLaboratory}{Los Alamos National Laboratory}
+\affiliation{\LosAlamosNationalLaboratory}
+\newcommand{\MassachusettsInstituteofTechnology}{Massachusetts Institute of Technology}
+\affiliation{\MassachusettsInstituteofTechnology}
+\newcommand{\MaxPlanckInstitutfuerKernphysik}{Max-Planck-Institut fuer Kernphysik}
+\affiliation{\MaxPlanckInstitutfuerKernphysik}
+\newcommand{\MichiganStateUniversity}{Michigan State University}
+\affiliation{\MichiganStateUniversity}
+\newcommand{\NationalInstituteofStandardsandTechnology}{National Institute of Standards and Technology}
+\affiliation{\NationalInstituteofStandardsandTechnology}
+\newcommand{\NorthCarolinaCentralUniversity}{North Carolina Central University}
+\affiliation{\NorthCarolinaCentralUniversity}
+\newcommand{\NorthwesternUniversity}{Northwestern University}
+\affiliation{\NorthwesternUniversity}
+\newcommand{\ORNLUTK}{ORNL/UTK}
+\affiliation{\ORNLUTK}
+\newcommand{\OakRidgeNationalLaboratory}{Oak Ridge National Laboratory}
+\affiliation{\OakRidgeNationalLaboratory}
+\newcommand{\OklahomaStateUniversity}{Oklahoma State University}
+\affiliation{\OklahomaStateUniversity}
+\newcommand{\PadovaUniversityandINFN}{Padova University and INFN}
+\affiliation{\PadovaUniversityandINFN}
+\newcommand{\PennsylvaniaStateUniversity}{Pennsylvania State University}
+\affiliation{\PennsylvaniaStateUniversity}
+\newcommand{\SLACNationalAcceleratorLaboratory}{SLAC National Accelerator Laboratory}
+\affiliation{\SLACNationalAcceleratorLaboratory}
+\newcommand{\SUNYAlbany}{SUNY Albany}
+\affiliation{\SUNYAlbany}
+\newcommand{\SandiaNationalLaboratories}{Sandia National Laboratories}
+\affiliation{\SandiaNationalLaboratories}
+\newcommand{\StonyBrookUniversity}{Stony Brook University}
+\affiliation{\StonyBrookUniversity}
+\newcommand{\SyracuseUniversity}{Syracuse University}
+\affiliation{\SyracuseUniversity}
+\newcommand{\TempleUniversity}{Temple University}
+\affiliation{\TempleUniversity}
+\newcommand{\ThomasJeffersonNationalAcceleratorFacility}{Thomas Jefferson National Accelerator Facility}
+\affiliation{\ThomasJeffersonNationalAcceleratorFacility}
+\newcommand{\TriangleUniversitiesNuclearLaboratory}{Triangle Universities Nuclear Laboratory}
+\affiliation{\TriangleUniversitiesNuclearLaboratory}
+\newcommand{\TribhuvanUniversity}{Tribhuvan University}
+\affiliation{\TribhuvanUniversity}
+\newcommand{\TsinghuaUniversity}{Tsinghua University}
+\affiliation{\TsinghuaUniversity}
+\newcommand{\UNICAMP}{UNICAMP}
+\affiliation{\UNICAMP}
+\newcommand{\UniversityCollegeLondon}{University College London}
+\affiliation{\UniversityCollegeLondon}
+\newcommand{\UniversityofAkron}{University of Akron}
+\affiliation{\UniversityofAkron}
+\newcommand{\UniversityofCaliforniaBerkeley}{University of California, Berkeley}
+\affiliation{\UniversityofCaliforniaBerkeley}
+\newcommand{\UniversityofCaliforniaDavis}{University of California, Davis}
+\affiliation{\UniversityofCaliforniaDavis}
+\newcommand{\UniversityofCaliforniaIrvine}{University of California, Irvine}
+\affiliation{\UniversityofCaliforniaIrvine}
+\newcommand{\UniversityofCaliforniaSantaBarbara}{University of California, Santa Barbara}
+\affiliation{\UniversityofCaliforniaSantaBarbara}
+\newcommand{\UniversityofCambridge}{University of Cambridge}
+\affiliation{\UniversityofCambridge}
+\newcommand{\UniversityofChicago}{University of Chicago}
+\affiliation{\UniversityofChicago}
+\newcommand{\UniversityofCincinnati}{University of Cincinnati}
+\affiliation{\UniversityofCincinnati}
+\newcommand{\UniversityofDelaware}{University of Delaware}
+\affiliation{\UniversityofDelaware}
+\newcommand{\UniversityofFlorida}{University of Florida}
+\affiliation{\UniversityofFlorida}
+\newcommand{\UniversityofHawaii}{University of Hawaii}
+\affiliation{\UniversityofHawaii}
+\newcommand{\UniversityofHouston}{University of Houston}
+\affiliation{\UniversityofHouston}
+\newcommand{\UniversityofIllinoisatUrbanaChampaign}{University of Illinois at Urbana-Champaign}
+\affiliation{\UniversityofIllinoisatUrbanaChampaign}
+\newcommand{\UniversityofLiverpool}{University of Liverpool}
+\affiliation{\UniversityofLiverpool}
+\newcommand{\UniversityofManchester}{University of Manchester}
+\affiliation{\UniversityofManchester}
+\newcommand{\UniversityofMaryland}{University of Maryland}
+\affiliation{\UniversityofMaryland}
+\newcommand{\UniversityofMassachusettsAmherst}{University of Massachusetts, Amherst}
+\affiliation{\UniversityofMassachusettsAmherst}
+\newcommand{\UniversityofMiami}{University of Miami}
+\affiliation{\UniversityofMiami}
+\newcommand{\UniversityofMinnesota}{University of Minnesota}
+\affiliation{\UniversityofMinnesota}
+\newcommand{\UniversityofOxford}{University of Oxford}
+\affiliation{\UniversityofOxford}
+\newcommand{\UniversityofPennsylvania}{University of Pennsylvania}
+\affiliation{\UniversityofPennsylvania}
+\newcommand{\UniversityofPittsburgh}{University of Pittsburgh}
+\affiliation{\UniversityofPittsburgh}
+\newcommand{\UniversityofRochester}{University of Rochester}
+\affiliation{\UniversityofRochester}
+\newcommand{\UniversityofTennessee}{University of Tennessee}
+\affiliation{\UniversityofTennessee}
+\newcommand{\UniversityofTexasatArlington}{University of Texas at Arlington}
+\affiliation{\UniversityofTexasatArlington}
+\newcommand{\UniversityofTexasatAustin}{University of Texas at Austin}
+\affiliation{\UniversityofTexasatAustin}
+\newcommand{\UniversityofWashington}{University of Washington}
+\affiliation{\UniversityofWashington}
+\newcommand{\UniversityofWisconsinMadison}{University of Wisconsin, Madison}
+\affiliation{\UniversityofWisconsinMadison}
+\newcommand{\VirginiaTech}{Virginia Tech}
+\affiliation{\VirginiaTech}
+\newcommand{\WilliamandMary}{William and Mary}
+\affiliation{\WilliamandMary}
+\newcommand{\YaleUniversity}{Yale University}
+\affiliation{\YaleUniversity}
 \author{C.~Adams}
-\affiliation{Yale University}
-\author{E.~Gramellini}
-\affiliation{Yale University}
-\author{M.~Galeazzi}
-\affiliation{University of Miami}
-\author{M.~Herman}
-\affiliation{Brookhaven National Laboratory}
-\author{G.~Ranucci}
-\affiliation{Istituto Nazionale di Fisica Nucleare - Milano}
-\author{T.K.~Gaisser}
-\affiliation{University of Delaware}
-\author{M.~Wetstein}
-\affiliation{University of Chicago}
-\author{S.~Brice}
-\affiliation{Fermilab}
-\author{J.~Ling}
-\affiliation{University of Illinois}
+\affiliation{\YaleUniversity}
+\author{J.R.~Alonso}
+\affiliation{\MassachusettsInstituteofTechnology}
+\author{A.M.~Ankowski}
+\affiliation{\VirginiaTech}
+\author{J.A.~Asaadi}
+\affiliation{\SyracuseUniversity}
+\author{J.~Ashenfelter}
+\affiliation{\YaleUniversity}
+\author{S.N.~Axani}
+\affiliation{\MassachusettsInstituteofTechnology}
+\author{K.~Babu\footnotemark[1]}
+\affiliation{\OklahomaStateUniversity}
+\author{C.~Backhouse}
+\affiliation{\CaliforniaInstituteofTechnology}
+\author{H.R.~Band}
+\affiliation{\YaleUniversity}
+\author{P.S.~Barbeau\footnotemark[1]}
+\affiliation{\DukeUniversity}
 \author{N.~Barros}
-\affiliation{University of Pennsylvania}
+\affiliation{\UniversityofPennsylvania}
+\author{A.~Bernstein}
+\affiliation{\LawrenceLivermoreNationalLaboratory}
+\author{M.~Betancourt}
+\affiliation{\Fermilab}
+\author{A.~Bhatti}
+\affiliation{\DOEOfficeofScience}
+\author{M.~Bishai\footnotemark[2]}
+\affiliation{\BrookhavenNationalLaboratory}
+\author{E.~Blucher\footnotemark[2]}
+\affiliation{\UniversityofChicago}
 \author{J.~Bouffard}
-\affiliation{SUNY Albany}
+\affiliation{\SUNYAlbany}
+\author{N.~Bowden}
+\affiliation{\LawrenceLivermoreNationalLaboratory}
+\author{S.~Brice}
+\affiliation{\Fermilab}
+\author{C.~Bryan}
+\affiliation{\OakRidgeNationalLaboratory}
+\author{L.~Camilleri\footnotemark[2]}
+\affiliation{\ColumbiaUniversity}
+\author{J.~Cao}
+\affiliation{\InstituteofHighEnergyPhysicsBeijing}
+\author{J.~Carlson}
+\affiliation{\LosAlamosNationalLaboratory}
+\author{R.E.~Carr}
+\affiliation{\ColumbiaUniversity}
+\author{A.~Chatterjee}
+\affiliation{\UniversityofTexasatArlington}
+\author{M.~Chen\footnotemark[1]}
+\affiliation{\UniversityofCaliforniaIrvine}
+\author{S.~CHEN}
+\affiliation{\TsinghuaUniversity}
+\author{M.~Chiu}
+\affiliation{\BrookhavenNationalLaboratory}
+\author{E.D.~Church}
+\affiliation{\FNALPNNL}
+\author{J.I.~Collar}
+\affiliation{\UniversityofChicago}
+\author{G.~Collin}
+\affiliation{\MassachusettsInstituteofTechnology}
+\author{J.M.~Conrad}
+\affiliation{\MassachusettsInstituteofTechnology}
+\author{M.R.~Convery\footnotemark[1]}
+\affiliation{\SLACNationalAcceleratorLaboratory}
+\author{R.L.~Cooper}
+\affiliation{\Indianauniversity}
+\author{D.~Cowen\footnotemark[1]}
+\affiliation{\PennsylvaniaStateUniversity}
+\author{G.~Crawford}
+\affiliation{\DOEOfficeofScience}
+\author{H.~Davoudiasl}
+\affiliation{\BrookhavenNationalLaboratory}
+\author{A.~De Gouvea}
+\affiliation{\NorthwesternUniversity}
+\author{D.J.~Dean}
+\affiliation{\OakRidgeNationalLaboratory}
+\author{G.~Deichert}
+\affiliation{\OakRidgeNationalLaboratory}
+\author{F.~Descamps}
+\affiliation{\LawrenceBerkeleyNationalLaboratory}
+\author{T.~DeYoung}
+\affiliation{\MichiganStateUniversity}
+\author{M.V.~Diwan}
+\affiliation{\BrookhavenNationalLaboratory}
+\author{Z.~Djurcic\footnotemark[1]}
+\affiliation{\ArgonneNationalLaboratory}
+\author{M.J.~Dolinski}
+\affiliation{\DrexelUniversity}
+\author{J.~Dolph}
+\affiliation{\BrookhavenNationalLaboratory}
+\author{B.~Donnelly}
+\affiliation{\MassachusettsInstituteofTechnology}
+\author{D.A.~Dwyer}
+\affiliation{\LawrenceBerkeleyNationalLaboratory}
+\author{S.~Dytman}
+\affiliation{\UniversityofPittsburgh}
+\author{Y.~Efremenko}
+\affiliation{\UniversityofTennessee}
+\author{L.L.~Everett}
+\affiliation{\UniversityofWisconsinMadison}
+\author{A.~Fava}
+\affiliation{\PadovaUniversityandINFN}
+\author{E.~Figueroa-Feliciano}
+\affiliation{\MassachusettsInstituteofTechnology}
+\author{B.~Fleming\footnotemark[2]}
+\affiliation{\YaleUniversity}
+\author{A.~Friedland\footnotemark[2]}
+\affiliation{\LosAlamosNationalLaboratory}
+\author{B.K.~Fujikawa}
+\affiliation{\LawrenceBerkeleyNationalLaboratory}
+\author{T.K.~Gaisser}
+\affiliation{\UniversityofDelaware}
+\author{M.~Galeazzi}
+\affiliation{\UniversityofMiami}
+\author{D.C.~Galehouse}
+\affiliation{\UniversityofAkron}
+\author{A.~Galindo-Uribarri}
+\affiliation{\OakRidgeNationalLaboratory}
+\author{G.T.~Garvey\footnotemark[1]}
+\affiliation{\LosAlamosNationalLaboratory}
+\author{S.~Gautam}
+\affiliation{\TribhuvanUniversity}
+\author{A.~Ghassemi}
+\affiliation{\HamamatsuPhotonicsUSA}
+\author{K.E.~Gilje}
+\affiliation{\IllinoisInstituteofTechnology}
+\author{M.~Gonzalez-Garcia\footnotemark[1]}
+\affiliation{\StonyBrookUniversity}
+\author{M.C.~Goodman}
+\affiliation{\ArgonneNationalLaboratory}
+\author{H.~Gordon\footnotemark[2]}
+\affiliation{\BrookhavenNationalLaboratory}
+\author{E.~Gramellini}
+\affiliation{\YaleUniversity}
+\author{M.P.~Green}
+\affiliation{\OakRidgeNationalLaboratory}
+\author{A.~Guglielmi}
+\affiliation{\PadovaUniversityandINFN}
+\author{R.W.~Hackenburg}
+\affiliation{\BrookhavenNationalLaboratory}
+\author{A.~Hackenburg}
+\affiliation{\YaleUniversity}
+\author{F.~Halzen}
+\affiliation{\UniversityofWisconsinMadison}
+\author{K.~Han}
+\affiliation{\YaleUniversity}
+\author{S.~Hans}
+\affiliation{\BrookhavenNationalLaboratory}
+\author{D.~Harris}
+\affiliation{\Fermilab}
+\author{K.M.~Heeger\footnotemark[1]\footnotemark[2]}
+\affiliation{\YaleUniversity}
+\author{M.~Heisel}
+\affiliation{\MaxPlanckInstitutfuerKernphysik}
+\author{M.~Herman}
+\affiliation{\BrookhavenNationalLaboratory}
+\author{R.~Hill}
+\affiliation{\UniversityofChicago}
+\author{A.~Holin}
+\affiliation{\UniversityCollegeLondon}
+\author{Y.~Hotta}
+\affiliation{\HamamatsuPhotonicsKK}
+\author{P.~Huber\footnotemark[1]}
+\affiliation{\VirginiaTech}
+\author{D.E.~Jaffe}
+\affiliation{\BrookhavenNationalLaboratory}
+\author{R.A.~Johnson}
+\affiliation{\UniversityofCincinnati}
+\author{J.~Joshi}
+\affiliation{\BrookhavenNationalLaboratory}
+\author{G.~Karagiorgi}
+\affiliation{\UniversityofManchester}
+\author{L.~Kaufman}
+\affiliation{\IndianaUniversity}
+\author{B.~Kayser}
+\affiliation{\Fermilab}
+\author{S.~Kettell\footnotemark[1]\footnotemark[2]}
+\affiliation{\BrookhavenNationalLaboratory}
+\author{W.~Kilgore}
+\affiliation{\DOEOfficeofScience}
+\author{B.J.~Kirby}
+\affiliation{\BrookhavenNationalLaboratory}
+\author{J.R.~Klein\footnotemark[1]\footnotemark[2]}
+\affiliation{\UniversityofPennsylvania}
+\author{Y.G.~Kolomensky\footnotemark[1]}
+\affiliation{\UniversityofCaliforniaBerkeley}
+\author{R.M.~Kriske}
+\affiliation{\UniversityofMinnesota}
+\author{C.E.~Lane}
+\affiliation{\DrexelUniversity}
+\author{T.J.~Langford\footnotemark[2]}
+\affiliation{\YaleUniversity}
+\author{A.~Lankford}
+\affiliation{\UniversityofCaliforniaIrvine}
+\author{K.~Lau}
+\affiliation{\UniversityofHouston}
+\author{J.G.~Learned}
+\affiliation{\UniversityofHawaii}
+\author{J.~Ling}
+\affiliation{\UniversityofIllinoisatUrbanaChampaign}
+\author{J.M.~Link\footnotemark[1]\footnotemark[2]}
+\affiliation{\VirginiaTech}
+\author{D.~Lissauer\footnotemark[2]}
+\affiliation{\BrookhavenNationalLaboratory}
+\author{L.~Littenberg\footnotemark[2]}
+\affiliation{\BrookhavenNationalLaboratory}
+\author{B.R.~Littlejohn\footnotemark[1]}
+\affiliation{\Fermilab}
+\author{M.~Locatelli}
+\affiliation{\CAENTechnologies}
+\author{S.~Lockwitz}
+\affiliation{\Fermilab}
+\author{M.~Lokajicek}
+\affiliation{\InsituteofPhysicsoftheAcademyofSciencesoftheCzechRepublic}
+\author{W.C.~Louis\footnotemark[1]}
+\affiliation{\LosAlamosNationalLaboratory}
+\author{K.~Luk}
+\affiliation{\UniversityofCaliforniaBerkeley}
+\author{J.~Lykken\footnotemark[1]\footnotemark[2]}
+\affiliation{\Fermilab}
+\author{W.J.~Marciano}
+\affiliation{\BrookhavenNationalLaboratory}
+\author{J.~Maricic\footnotemark[1]}
+\affiliation{\UniversityofHawaii}
+\author{D.M.~Markoff}
+\affiliation{\NorthCarolinaCentralUniversity}
+\author{D.A.~Martinez Caicedo}
+\affiliation{\IllinoisInstituteofTechnology}
+\author{C.~Mauger}
+\affiliation{\LosAlamosNationalLaboratory}
+\author{K.~Mavrokoridis}
+\affiliation{\UniversityofLiverpool}
+\author{E.~McCluskey}
+\affiliation{\Fermilab}
+\author{D.~McKeen}
+\affiliation{\UniversityofWashington}
+\author{R.~McKeown}
+\affiliation{\ThomasJeffersonNationalAcceleratorFacility}
+\author{G.~Mills}
+\affiliation{\LosAlamosNationalLaboratory}
+\author{I.~Mocioiu}
+\affiliation{\PennsylvaniaStateUniversity}
+\author{B.~Monreal\footnotemark[1]}
+\affiliation{\UniversityofCaliforniaSantaBarbara}
+\author{M.R.~Mooney}
+\affiliation{\BrookhavenNationalLaboratory}
+\author{J.G.~Morfin\footnotemark[1]}
+\affiliation{\Fermilab}
+\author{P.~Mumm}
+\affiliation{\NationalInstituteofStandardsandTechnology}
+\author{J.~Napolitano}
+\affiliation{\TempleUniversity}
 \author{R.~Neilson}
-\affiliation{Drexel University}
-\author{A.~Friedland}
-\affiliation{Los Alamos National Laboratory}
+\affiliation{\DrexelUniversity}
+\author{J.~Nelson}
+\affiliation{\WilliamandMary}
+\author{M.~Nessi\footnotemark[1]\footnotemark[2]}
+\affiliation{\CERN}
+\author{D.~Norcini}
+\affiliation{\YaleUniversity}
+\author{F.~Nova}
+\affiliation{\UniversityofTexasatAustin}
+\author{D.R.~Nygren}
+\affiliation{\UniversityofTexasatArlington}
+\author{G.D.~Orebi Gann\footnotemark[1]}
+\affiliation{\LawrenceBerkeleyNationalLaboratory}
+\author{O.~Palamara}
+\affiliation{\Fermilab}
+\author{Z.~Parsa}
+\affiliation{\BrookhavenNationalLaboratory}
+\author{R.~Patterson}
+\affiliation{\CaliforniaInstituteofTechnology}
+\author{P.~Paul}
+\affiliation{\StonyBrookUniversity}
+\author{O.~Peres}
+\affiliation{\UNICAMP}
+\author{A.~Pocar}
+\affiliation{\UniversityofMassachusettsAmherst}
+\author{X.~Qian\footnotemark[1]\footnotemark[2]}
+\affiliation{\BrookhavenNationalLaboratory}
+\author{J.~Raaf}
+\affiliation{\Fermilab}
+\author{R.~Rameika\footnotemark[1]\footnotemark[2]}
+\affiliation{\Fermilab}
+\author{G.~Ranucci}
+\affiliation{\IstitutoNazionalediFisicaNucleareMilano}
+\author{H.~Ray}
+\affiliation{\UniversityofFlorida}
+\author{D.~Reyna}
+\affiliation{\SandiaNationalLaboratories}
+\author{G.C.~Rich}
+\affiliation{\TriangleUniversitiesNuclearLaboratory}
+\author{P.~Rodrigues}
+\affiliation{\UniversityofRochester}
+\author{E.~Romero Romero}
+\affiliation{\ORNLUTK}
+\author{E.I.~Rosenberg}
+\affiliation{\DOEOfficeofScience}
+\author{R.~Rosero}
+\affiliation{\BrookhavenNationalLaboratory}
+\author{S.D.~Rountree}
+\affiliation{\VirginiaTech}
+\author{B.~Rybolt}
+\affiliation{\UniversityofTennessee}
+\author{M.~Sanchez\footnotemark[1]}
+\affiliation{\IowaStateUniversity}
+\author{G.~Santucci}
+\affiliation{\StonyBrookUniversity}
+\author{D.~Schmitz\footnotemark[1]}
+\affiliation{\UniversityofChicago}
+\author{K.~Scholberg\footnotemark[1]\footnotemark[2]}
+\affiliation{\DukeUniversity}
+\author{D.~Seckel}
+\affiliation{\UniversityofDelaware}
+\author{M.~Shaevitz\footnotemark[1]\footnotemark[2]}
+\affiliation{\ColumbiaUniversity}
+\author{R.~Shrock}
+\affiliation{\StonyBrookUniversity}
+\author{M.B.~Smy\footnotemark[1]}
+\affiliation{\UniversityofCaliforniaIrvine}
+\author{M.~Soderberg}
+\affiliation{\SyracuseUniversity}
+\author{A.~Sonzogni}
+\affiliation{\BrookhavenNationalLaboratory}
+\author{A.B.~Sousa\footnotemark[1]}
+\affiliation{\UniversityofCincinnati}
+\author{J.~Spitz}
+\affiliation{\MassachusettsInstituteofTechnology}
+\author{J.M.~St. John}
+\affiliation{\UniversityofCincinnati}
+\author{J.~Stewart\footnotemark[1]}
+\affiliation{\BrookhavenNationalLaboratory}
+\author{A.~Stone}
+\affiliation{\DOEOfficeofScience}
+\author{J.B.~Strait}
+\affiliation{\Fermilab}
+\author{G.~Sullivan\footnotemark[1]\footnotemark[2]}
+\affiliation{\UniversityofMaryland}
+\author{R.~Svoboda\footnotemark[1]\footnotemark[2]}
+\affiliation{\UniversityofCaliforniaDavis}
+\author{A.M.~Szelc}
+\affiliation{\YaleUniversity}
+\author{R.~Tayloe}
+\affiliation{\IndianaUniversity}
+\author{M.A.~Thomson\footnotemark[2]}
+\affiliation{\UniversityofCambridge}
+\author{M.~Toups}
+\affiliation{\MassachusettsInstituteofTechnology}
+\author{A.~Vacheret}
+\affiliation{\UniversityofOxford}
+\author{M.~Vagins\footnotemark[1]}
+\affiliation{\UniversityofCaliforniaIrvine}
+\author{R.G.~Van de Water}
+\affiliation{\LosAlamosNationalLaboratory}
+\author{R.~Vogelaar}
+\affiliation{\VirginiaTech}
+\author{M.~Weber}
+\affiliation{\Bern}
+\author{W.~Weng}
+\affiliation{\BrookhavenNationalLaboratory}
+\author{M.~Wetstein}
+\affiliation{\UniversityofChicago}
+\author{C.~White}
+\affiliation{\IllinoisInstituteofTechnology}
+\author{B.R.~White}
+\affiliation{\OakRidgeNationalLaboratory}
+\author{L.~Whitehead\footnotemark[1]}
+\affiliation{\UniversityofHouston}
+\author{D.W.~Whittington}
+\affiliation{\IndianaUniversity}
+\author{M.J.~Wilking\footnotemark[2]}
+\affiliation{\StonyBrookUniversity}
+\author{R.J.~Wilson}
+\affiliation{\ColoradoStateUniversity}
+\author{P.~Wilson\footnotemark[2]}
+\affiliation{\Fermilab}
+\author{D.~Winklehner}
+\affiliation{\MassachusettsInstituteofTechnology}
+\author{D.R.~Winn}
+\affiliation{\FairfieldUniversity}
+\author{E.~Worcester}
+\affiliation{\BrookhavenNationalLaboratory}
+\author{L.~Yang}
+\affiliation{\UniversityofIllinoisatUrbanaChampaign}
+\author{M.~Yeh}
+\affiliation{\BrookhavenNationalLaboratory}
+\author{Z.W.~Yokley}
+\affiliation{\VirginiaTech}
+\author{J.~Yoo\footnotemark[1]}
+\affiliation{\Fermilab}
+\author{Y.~Yoshizawa}
+\affiliation{\HamamatsuPhotonics}
+\author{B.~Yu\footnotemark[2]}
+\affiliation{\BrookhavenNationalLaboratory}
+\author{J.~Yu}
+\affiliation{\UniversityofTexasatArlington}
+\author{C.~Zhang}
+\affiliation{\BrookhavenNationalLaboratory}

@@ -14,13 +14,31 @@
   $ evince WINP.pdf
 #+END_EXAMPLE
 
-Note: do *not* edit =author.tex=.  It is generated from a spread sheet of registrants:
+* Author list
+
+Note: do *not* edit =author.tex=.  It is generated from a spread sheet of registrants via:
 
 #+BEGIN_EXAMPLE
   $ python scripts/authorgen.py other/reginfo.xlsx > authors.tex 
 #+END_EXAMPLE
 
-You may need a few extra LaTeX packages.  On Debian/Ubuntu these are provided by:
+To run this script you'll need the [[https://pypi.python.org/pypi/xlrd][xlrd]] Python module.  You can install it personally via 
+
+#+BEGIN_EXAMPLE
+  $ pip install --user xlrd
+#+END_EXAMPLE
+
+or system wide on Debian/Ubuntu via
+
+#+BEGIN_EXAMPLE
+  $ sudo apt-get install python-xlrd
+#+END_EXAMPLE
+
+* LaTeX mechanics
+
+You may need a few extra packages to provide the LaTeX styles and classes needed by the document.  
+
+On Debian/Ubuntu these are provided by:
 
 #+BEGIN_EXAMPLE
   $ sudo apt-get install texlive-publishers texlive-latex-extra texlive-fonts-recommended
