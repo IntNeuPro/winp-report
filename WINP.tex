@@ -1,4 +1,8 @@
-\documentclass[twoside,letterpaper,titlepage,nofootinbib,prd,12pt,superscriptaddress,floatfix]{revtex4-1}
+%\documentclass[twoside,letterpaper,titlepage,nofootinbib,prd,12pt,superscriptaddress,floatfix]{revtex4-1}
+\documentclass[twoside,letterpaper,12pt]{article}
+\usepackage{authblk}
+\renewcommand\Authfont{\small}
+\renewcommand\Affilfont{\itshape\small}
 
 \usepackage[english]{babel}
 \usepackage{color}
@@ -16,6 +20,9 @@
 \usepackage{cancel}
 %\usepackage{draftwatermark}
 \usepackage{txfonts}
+
+% if not using revtex
+\usepackage[colorlinks=true,urlcolor=black,linkcolor=black,citecolor=black,bookmarks=true]{hyperref}
 
 %\SetWatermarkScale{1}
 %\singlespacing
@@ -54,6 +61,7 @@
 \clearpage
 \input{./authors.tex}
 \maketitle
+
 
 \clearpage
 %========  Start of main text:
@@ -101,7 +109,8 @@
 
 %
 %..  References:
-\bibliographystyle{apsrev4-1}
+%\bibliographystyle{apsrev4-1}
+\bibliographystyle{abbrv}
 \bibliography{WINP}
 %
 %========  That's it.

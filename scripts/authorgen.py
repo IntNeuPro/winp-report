@@ -21,31 +21,36 @@ def sort_affiliations(affils):
     # maybe do something smarter here.
     return sorted(affils.items())
 
-def latex(registrants):
-    '''
-    \author{K.S.~Babu\footnotemark[1]\footnotetext[1]{Convener}}
-    \affiliation{Oklahoma State University}
-    '''
-
-    affils = dict()
-    authors = list()
-
+def affiliator(affils):
     def make_affil(affil):
         ascii_affil = affil.decode('unicode_escape').encode('ascii','ignore')
         nick = ascii_affil.translate(None, ' .-,_/')
         return affils.setdefault(ascii_affil, nick)
+    return make_affil
+
+def initials(person):
+    inits = person['fname'][0].upper() + '.'
+    if person['mi']:
+        inits += person['mi'].upper() + '.'
+    return inits
+
+def revtex(registrants):
+    '''
+    Return a revtex4 compatible author list
+    '''
+
+    authors = list()
+
+    affils = dict()
+    make_affil = affiliator(affils)
 
     for person in registrants:
-        inits = person['fname'][0].upper() + '.'
-        if person['mi']:
-            inits += person['mi'].upper() + '.'
-
+        inits = initials(person)
         extra_fn = ""
         if person['convenor']:  # watch out for the alternative spelling!
             extra_fn += r'\footnotemark[1]'
         if person['organizing']: 
             extra_fn += r'\footnotemark[2]'
-
         affil_nick = make_affil(person['affiliation'])
         d = dict(person, inits=inits, footnote=extra_fn, affil=affil_nick)
         s = r'''\author{%(inits)s~%(lname)s%(footnote)s}
@@ -63,6 +68,53 @@ def latex(registrants):
     ret.extend(authors)
     return '\n'.join(ret)
 
+def authblk(registrants):
+    'Return an authblk author list'
+    ret = list()
+
+    affils = set()
+    for person in registrants:
+        affil = person['affiliation']
+        affils.add(affil)
+    affils = list(affils)
+    affils.sort()
+
+    convenor_fn = None
+    organizer_fn = None
+
+    for person in registrants:
+        extra_fn = ""
+        extra_ret = list()
+
+        if person['convenor']:  # watch out for the alternative spelling!
+            if convenor_fn:
+                extra_fn += convenor_fn
+            else:
+                convenor_fn = r'\protect\ConvenorMark'
+                extra_fn += r'\footnote{Convenor}'
+                extra_ret.append(r'\newcommand\ConvenorMark{\footnotemark[\arabic{footnote}]}')
+
+        if person['organizing']: 
+            if organizer_fn:
+                extra_fn += organizer_fn
+            else:
+                organizer_fn = r'\protect\OrganizerMark'
+                extra_fn += r'\footnote{Organizer}'
+                extra_ret.append(r'\newcommand\OrganizerMark{\footnotemark[\arabic{footnote}]}')
+
+        d = dict(person, inits=initials(person), 
+                 footnote = extra_fn,
+                 ind = affils.index(person['affiliation'])+1)
+
+        a = r'\author[%(ind)d]{%(inits)s~%(lname)s%(footnote)s}' % d
+        ret.append(a)
+        ret.extend(extra_ret)
+
+    for count, affil in enumerate(affils):
+        ret.append(r'\affil[%d]{\mbox{%s}}' % (count+1, affil))
+
+    return '\n'.join(ret)
+
 if '__main__' == __name__:
     import sys
     d = load(sys.argv[1])
@@ -72,6 +124,9 @@ if '__main__' == __name__:
     except IndexError:
         outfp = sys.stdout
 
-    outfp.write(latex(d))
+    #latex = revtex(d)
+    latex = authblk(d)
+
+    outfp.write(latex)
     outfp.close()
 
