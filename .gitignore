@@ -6,3 +6,6 @@
 WINP.pdf
 *~
 *.pyc
+*.fdb_latexmk
+*.fls
+*.out
