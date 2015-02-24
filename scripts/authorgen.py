@@ -70,7 +70,13 @@ def revtex(registrants):
 
 def authblk(registrants):
     'Return an authblk author list'
-    ret = list()
+    ret = [r'\footnotetext[1]{Convenor}',
+           r'\newcommand\ConvenorMark{\footnotemark[1]}',
+           r'\footnotetext[2]{Organizer}',
+           r'\newcommand\OrganizerMark{\footnotemark[2]}']
+    convenor_fn = r'\protect\ConvenorMark'
+    organizer_fn = r'\protect\OrganizerMark'
+
 
     affils = set()
     for person in registrants:
@@ -79,28 +85,16 @@ def authblk(registrants):
     affils = list(affils)
     affils.sort()
 
-    convenor_fn = None
-    organizer_fn = None
 
     for person in registrants:
         extra_fn = ""
         extra_ret = list()
 
         if person['convenor']:  # watch out for the alternative spelling!
-            if convenor_fn:
-                extra_fn += convenor_fn
-            else:
-                convenor_fn = r'\protect\ConvenorMark'
-                extra_fn += r'\footnote{Convenor}'
-                extra_ret.append(r'\newcommand\ConvenorMark{\footnotemark[\arabic{footnote}]}')
+            extra_fn += convenor_fn
 
         if person['organizing']: 
-            if organizer_fn:
-                extra_fn += organizer_fn
-            else:
-                organizer_fn = r'\protect\OrganizerMark'
-                extra_fn += r'\footnote{Organizer}'
-                extra_ret.append(r'\newcommand\OrganizerMark{\footnotemark[\arabic{footnote}]}')
+            extra_fn += organizer_fn
 
         d = dict(person, inits=initials(person), 
                  footnote = extra_fn,
