@@ -70,10 +70,14 @@ def revtex(registrants):
 
 def authblk(registrants):
     'Return an authblk author list'
-    ret = [r'\footnotetext[1]{Convenor}',
-           r'\newcommand\ConvenorMark{\footnotemark[1]}',
-           r'\footnotetext[2]{Organizer}',
-           r'\newcommand\OrganizerMark{\footnotemark[2]}']
+    ret = [r'''
+\renewcommand*{\thefootnote}{\fnsymbol{footnote}}
+\footnotetext[1]{Convenor}
+\newcommand\ConvenorMark{\footnotemark[1]}
+\footnotetext[2]{Organizer}
+\newcommand\OrganizerMark{\footnotemark[2]}
+\renewcommand*{\thefootnote}{\arabic{footnote}}
+''']
     convenor_fn = r'\protect\ConvenorMark'
     organizer_fn = r'\protect\OrganizerMark'
 
@@ -85,6 +89,7 @@ def authblk(registrants):
     affils = list(affils)
     affils.sort()
 
+    affil_offset = 1
 
     for person in registrants:
         extra_fn = ""
@@ -98,14 +103,14 @@ def authblk(registrants):
 
         d = dict(person, inits=initials(person), 
                  footnote = extra_fn,
-                 ind = affils.index(person['affiliation'])+1)
+                 ind = affils.index(person['affiliation'])+affil_offset)
 
         a = r'\author[%(ind)d]{%(inits)s~%(lname)s%(footnote)s}' % d
         ret.append(a)
         ret.extend(extra_ret)
 
     for count, affil in enumerate(affils):
-        ret.append(r'\affil[%d]{\mbox{%s}}' % (count+1, affil))
+        ret.append(r'\affil[%d]{\mbox{%s}}' % (count+affil_offset, affil))
 
     return '\n'.join(ret)
 
