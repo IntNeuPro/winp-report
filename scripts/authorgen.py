@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+import re
 import xlrd
 
 def load(filename, sheet=0):
@@ -34,39 +35,10 @@ def initials(person):
         inits += person['mi'].upper() + '.'
     return inits
 
-def revtex(registrants):
-    '''
-    Return a revtex4 compatible author list
-    '''
+def affiliations(person):
+    'Return affiliations for a person as a list'
+    return [x.strip() for x in re.split('[/]', person['affiliation'])]
 
-    authors = list()
-
-    affils = dict()
-    make_affil = affiliator(affils)
-
-    for person in registrants:
-        inits = initials(person)
-        extra_fn = ""
-        if person['convenor']:  # watch out for the alternative spelling!
-            extra_fn += r'\footnotemark[1]'
-        if person['organizing']: 
-            extra_fn += r'\footnotemark[2]'
-        affil_nick = make_affil(person['affiliation'])
-        d = dict(person, inits=inits, footnote=extra_fn, affil=affil_nick)
-        s = r'''\author{%(inits)s~%(lname)s%(footnote)s}
-\affiliation{\%(affil)s}''' % d
-        authors.append(s)
-
-    ret = list()
-    ret.append(r"\footnotetext[1]{Convener}")
-    ret.append(r"\footnotetext[2]{Organizer}")
-
-    for inst,nick in sort_affiliations(affils):
-        ret.append(r'''\newcommand{\%s}{%s}''' % (nick, inst)) # must match usage above
-        ret.append(r'''\affiliation{\%s}''' % (nick,))
-
-    ret.extend(authors)
-    return '\n'.join(ret)
 
 def authblk(registrants):
     'Return an authblk author list'
@@ -84,8 +56,7 @@ def authblk(registrants):
 
     affils = set()
     for person in registrants:
-        affil = person['affiliation']
-        affils.add(affil)
+        affils.update(affiliations(person))
     affils = list(affils)
     affils.sort()
 
@@ -101,12 +72,12 @@ def authblk(registrants):
         if person['organizing']: 
             extra_fn += organizer_fn
 
+        ind = [str(affils.index(a)+affil_offset) for a in affiliations(person)]
+        ind = ','.join(sorted(ind))
         d = dict(person, inits=initials(person), 
                  footnote = extra_fn,
-                 ind = affils.index(person['affiliation'])+affil_offset)
-
-        a = r'\author[%(ind)d]{%(inits)s~%(lname)s%(footnote)s}' % d
-        ret.append(a)
+                 ind = ind)
+        ret.append(r'\author[%(ind)s]{%(inits)s~%(lname)s%(footnote)s}' % d)
         ret.extend(extra_ret)
 
     for count, affil in enumerate(affils):
