@@ -19,7 +19,7 @@
 Note: do *not* edit =author.tex=.  It is generated from a spread sheet of registrants via:
 
 #+BEGIN_EXAMPLE
-  $ python scripts/authorgen.py other/reginfo.xlsx > authors.tex 
+  $ python scripts/authorgen.py other/reginfo.xlsx authors.tex 
 #+END_EXAMPLE
 
 To run this script you'll need the [[https://pypi.python.org/pypi/xlrd][xlrd]] Python module.  You can install it personally via 
