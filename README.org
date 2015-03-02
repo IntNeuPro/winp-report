@@ -52,3 +52,9 @@ repository ("winp-report") and what your GitHub account name is.
 For human-oriented version control, contact Jon Link.
 
 
+* Autobuilder
+
+
+A PDF of the documented is generated through the services of [[https://www.sharelatex.com][ShareLaTeX]]:
+
+  https://www.sharelatex.com/github/repos/IntNeuPro/winp-report
