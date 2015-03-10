@@ -30,7 +30,11 @@ def affiliator(affils):
     return make_affil
 
 def initials(person):
-    inits = person['fname'][0].upper() + '.'
+    inits = ''
+    if '.' in person['fname']:
+        inits += person['fname']
+    else:
+        inits = person['fname'][0].upper() + '.'
     if person['mi']:
         inits += person['mi'].upper() + '.'
     return inits
